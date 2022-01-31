@@ -364,7 +364,6 @@ nav {
   grid-area: sidebar;
   background-color: var(--teal);
   align-self: stretch;
-  max-width: 98px;
 }
 
 main {
@@ -382,4 +381,139 @@ footer {
   padding: 13px 20px;
   align-self: stretch;
   overflow-x: auto;
+}
+
+.Siderbar-Ul2 {
+  margin: 0px;
+  list-style-type: none;
+  padding: 0px;
+}
+.Sidebar-Li2 {
+  display: block;
+  width: auto;
+  position: relative;
+  white-space: nowrap;
+}
+.Sidebar-Li2 .active2 {
+  background-color: var(--link);
+}
+
+.Sidebar-Links2 {
+  text-align: left;
+}
+
+.Sidebar-Icon2 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+.Sidebar-Link2 {
+  color: var(--white);
+  padding: 12px 24px;
+  font-weight: normal;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 18px auto;
+  gap: 10px;
+  align-items: baseline;
+  transition: 0.3s;
+  border-width: 6px;
+  font-size: 14px;
+  line-height: 19px;
+}
+.Sidebar-Text2 {
+  display: block;
+  text-transform: none;
+  white-space: pre-wrap;
+  overflow: hidden;
+  font-size: 14px;
+}
+.Sidebar-Link2:hover {
+  background: transparent;
+  color: var(--link);
+  border-color: transparent var(--link) transparent transparent;
+}
+
+.Sidebar-Link2:active {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.active2 {
+  border-color: transparent var(--link) transparent transparent;
+  background-color: #007b85;
+}
+
+.active-link2 {
+  color: var(--link);
+}
+
+@media (max-width: 450px) {
+  .Sidebar-Text2 {
+    display: none;
+  }
+  .Sidebar-Links2 {
+    border-top: 0px solid rgba(0, 0, 0, 0.25);
+  }
+  .Sublink {
+    grid-template-columns: 0px auto!important;
+    gap: 0px !important;
+  }
+}
+
+.Sublink-Ul {
+  margin: 0px;
+  list-style-type: none;
+  padding: 0px;
+  background-color: #007b85;
+}
+
+.Sublink-Li {
+  display: block;
+  width: auto;
+  position: relative;
+  white-space: nowrap;
+}
+
+.Sublink-Links {
+  text-align: left;
+}
+
+.Sublink {
+  color: var(--white);
+  padding: 12px 24px;
+  font-weight: normal;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 18px auto;
+  gap: 10px;
+  align-items: baseline;
+  transition: 0.3s;
+  border-width: 6px;
+  font-size: 13px;
+  line-height: 19px;
+}
+.Sublink.active-link2 {
+  color: var(--link) !important;
+}
+.Sublink-Text {
+  display: block;
+  text-transform: none;
+  white-space: pre-wrap;
+  overflow: hidden;
+  font-size: 14px;
+}
+.Sublink:hover {
+  background: transparent;
+  color: var(--link);
+  border-color: transparent var(--link) transparent transparent;
+}
+
+.Sublink:active {
+  color: var(--link);
+  text-decoration: underline;
 }
