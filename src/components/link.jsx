@@ -3,7 +3,7 @@ import React from "react"
 const Link = props => (
   /*eslint-disable*/
   <li className={"Sidebar-Li" + " " + props.state}>
-    <a href="/" className={"Sidebar-Link" + " " + props.linkstate}>
+    <a href={props.link} className={"Sidebar-Link" + " " + props.linkstate}>
       <span
         className={
           "sk-jumpbar-item-icon sk-icon sk-icon-" +

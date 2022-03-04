@@ -3,7 +3,7 @@ import React from "react"
 const NavLink2 = props => (
   /*eslint-disable*/
   <li className={"Sidebar-Li2" + " " + props.state}>
-    <a href="/" className={"Sidebar-Link2" + " " + props.linkstate}>
+    <a href={props.link} className={"Sidebar-Link2" + " " + props.linkstate}>
       <span
         className={
           "sk-jumpbar-item-icon sk-icon sk-icon-" +

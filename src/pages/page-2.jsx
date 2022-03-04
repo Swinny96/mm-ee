@@ -1,45 +1,23 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
+import * as React from "react"
+import Sidebar2 from "../components/sidebar2"
+import NavLink2 from "../components/navlink2"
+import SubNavLink from "../components/sublink"
+import { Link } from "gatsby"
 
- import * as React from "react"
- import PropTypes from "prop-types"
- import { useStaticQuery, graphql } from "gatsby"
- 
- import Header from "./header"
- import "./layout.css"
- import "./icon.css"
- import "./font.css"
- import Footer from "./footer"
- import Sidebar2 from "./sidebar2"
- import NavLink2 from "./navlink2"
- import SubNavLink from "./sublink"
- 
- const Layout = ({ children }) => {
-   const data = useStaticQuery(graphql`
-     query SiteTitleQuery {
-       site {
-         siteMetadata {
-           title
-         }
-       }
-     }
-   `)
- 
-   return (
-     <div className="layout">
-       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-       <Sidebar2
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+
+const SecondPage = () => (
+  <Layout>
+    <Seo title="Page two" />
+    <Sidebar2
          link1={
            <NavLink2
              state=""
              linkstate=""
              icon="home"
              linkname="Welcome"
-             link="/"
+             link="welcome"
            />
          }
          link2={
@@ -48,7 +26,7 @@
              linkstate=""
              icon="dashboard"
              linkname="Overview"
-             link="404"
+             link="/404"
            />
          }
          link3={
@@ -57,7 +35,7 @@
              linkstate=""
              icon="mobile"
              linkname="Phones"
-             link="404"
+             link="page-2"
            />
          }
          link4={
@@ -149,15 +127,10 @@
            />
          }
        />
-       <main>{children}</main>
-       <Footer />
-     </div>
-   )
- }
- 
- Layout.propTypes = {
-   children: PropTypes.node.isRequired,
- }
- 
- export default Layout
- 
+       <main>
+
+       </main>
+  </Layout>
+)
+
+export default SecondPage

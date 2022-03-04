@@ -372,6 +372,7 @@ main {
   background-color: #f4f4f4;
   padding: 2em;
   align-self: stretch;
+  flex-direction: column;
 }
 
 footer {
@@ -460,7 +461,7 @@ footer {
     border-top: 0px solid rgba(0, 0, 0, 0.25);
   }
   .Sublink {
-    grid-template-columns: 0px auto!important;
+    grid-template-columns: 0px auto !important;
     gap: 0px !important;
   }
 }
@@ -516,4 +517,8 @@ footer {
 .Sublink:active {
   color: var(--link);
   text-decoration: underline;
+}
+
+.card_background {
+  background-image: url("../images/welcome/Background.png");
 }
