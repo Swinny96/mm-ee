@@ -9,8 +9,10 @@ const Cards = () => {
           CardList.map(({id, image, title, text, link}) => {
             return (
               <Card key={id} className="card_background">
-                <CardHeading>{title}</CardHeading>
-                <CardText>{text}</CardText>
+                <CardTextContainer>
+                    <CardHeading>{title}</CardHeading>
+                    <CardText>{text}</CardText>
+                </CardTextContainer>
                 <CardIconContainer>
                     <CardIcon src={image} alt={title} />
                 </CardIconContainer>
@@ -28,47 +30,66 @@ const Cards = () => {
 export default Cards
 
 const CardContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-
-  @media screen and (max-width: 1024px) {
-      grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
-  }
-
-  @media screen and (max-width: 600px) {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 `
 const Card = styled.div`
-  padding: 1.3rem;
-  border-radius: 2rem;
+  padding: 36px;
+  border-radius: 16px;
+  max-width: 180px;
+  min-width: 180px;
   border: 1px solid transparent;
-  max-width: 200px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  aspect-ratio: 4/3;
+`
 
-  &:hover{
-    background: transparent;
-  }
+const CardTextContainer = styled.div`
+    display: grid;
+    gap: 8px;
+    text-align: left;
 `
 const CardIconContainer = styled.div`
-  border-radius: 1.5rem;
   overflow: hidden;
 `
 const CardIcon = styled.img`
-  aspect-ratio: 4/3;
-  object-fit: scale-down;
+    max-width: 64px;
+    max-height: 64px;
 `
 const CardHeading = styled.h3`
-  margin: 1.2rem 0;
+  color: white;
+  margin-bottom: 0px;
+  font-family: Rubrik;
+  font-style: normal;
+  font-weight: 600;
 `
-const CardText = styled.p`
-  margin: 1rem 0 2rem;
+const CardText = styled.h5`
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-family: Rubrik;
+  font-style: normal;
+  font-weight: normal;
 `
 const CardCTAGroup = styled.div`
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  justify-content: center;
 `
-const CardCTA = styled.a``
+const CardCTA = styled.a`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 32px;
+    background: #F5D500;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #005A61;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+`

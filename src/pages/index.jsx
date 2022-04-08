@@ -5,6 +5,7 @@ import SubNavLink from "../components/sublink"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Table from "../components/Tables/Table"
 
 const IndexPage = () => (
   <Layout>
@@ -127,7 +128,7 @@ const IndexPage = () => (
          }
        />
        <main>
-
+         <Table />
        </main>
   </Layout>
 )

@@ -114,9 +114,11 @@ const WelcomePage = () => (
          }
        />
        <Content>
-          <Title>WELCOME TO MOBILE MANAGER BOB</Title>
-          <Text>Keep on top of your bills & usage, manage your services, check out the shop  - and more.Lift and shift – click and hold on tiles to re-arrange them in any order you want.</Text>
-          <Cards />
+         <Contents>
+            <Title>WELCOME TO MOBILE MANAGER BOB</Title>
+            <Text>Keep on top of your bills & usage, manage your services, check out the shop  - and more.Lift and shift – click and hold on tiles to re-arrange them in any order you want.</Text>
+            <Cards />
+          </Contents>
        </Content>
   </Layout>
 )
@@ -127,12 +129,14 @@ const Content = styled.main`
   margin: 0 auto;
   text-align: center;
 `
+const Contents = styled.div`
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+`
 const Title = styled.h1`
   font-size: 64px;
   line-height: 100%;
-  display: flex;
-  align-items: center;
-  text-align: center;
   text-transform: uppercase;
 `
 const Text = styled.h5`
@@ -140,8 +144,5 @@ const Text = styled.h5`
   font-weight: normal;
   font-size: 20px;
   line-height: 140%;
-  display: flex;
-  align-items: center;
-  text-align: center;
   color: #009C9C;
 `
