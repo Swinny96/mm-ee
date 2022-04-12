@@ -40,6 +40,7 @@ const Card = styled.div`
   background: var(--white);
   padding: 18px;
   border-radius: 8px;
+  min-width: 240px;
 `
 const CardTitle = styled.h3`
   font-weight: bold;
