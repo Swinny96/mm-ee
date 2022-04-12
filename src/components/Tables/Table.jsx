@@ -111,15 +111,26 @@ const NewTable = styled.table`
   width: 100%;
   border-collapse: collapse;
 `
-const TableHead = styled.thead``
-const TableRow = styled.tr`
+const TableHead = styled.thead`
+  background: var(--aqua);
+  button {
+    color: #fff;
+  }
+  tr {
     &:hover {
-        background-color: #eee;
+      background: var(--teal);
+    }
+  }
+`
+const TableRow = styled.tr`
+  transition: 0.3s;
+    &:hover {
+        background: #eee;
     }
 `
 const TableHeading = styled.th`
   text-align: left;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid transparent;
 `
 const TableBody = styled.tbody``
 const TableDetails = styled.td`  
@@ -135,14 +146,20 @@ const TableButton = styled.button`
   padding: 0.5em;
   margin-bottom: 1px;
   background: transparent;
-
-  &.ascending::after {
-    content: '👇';
+  display: flex;
+  cursor: pointer;
+  &:after {
+    content: '⭥';
     display: inline-block;
     margin-left: 1em;
   }
+
+  &.ascending::after {
+    content: '⌄';
+
+  }
   &.descending::after {
-    content: '☝️';
+    content: '˄';
     display: inline-block;
     margin-left: 1em;
   }

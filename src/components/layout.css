@@ -1,6 +1,10 @@
 :root {
   --coal: #3c3d41;
-  --teal: #009c9c;
+  --slate: #6D6E71;
+  --silver: #A9A9A9;
+  --teal: #007B85;
+  --aqua: #009C9C;
+  --dark-teal: #005A61;
   --info: #2d6bcf;
   --link: #ffe600;
   --success: #4bbf73;
@@ -168,14 +172,14 @@ header a {
 }
 
 .Sidebar-Li:hover {
-  border-color: var(--teal) #f5d500 var(--teal) var(--teal);
+  border-color: var(--aqua) #f5d500 var(--aqua) var(--aqua);
   border-color: rgba(255, 255, 255, 0.25) #f5d500 rgba(255, 255, 255, 0.25)
     rgba(0, 0, 0, 0.25);
   background-color: #007b85;
 }
 
 .Sidebar-Li:before {
-  border-color: var(--teal) #f5d500 var(--teal) var(--teal);
+  border-color: var(--aqua) #f5d500 var(--aqua) var(--aqua);
   border-width: 6px;
   margin-top: -6px;
   top: 50%;
@@ -355,14 +359,14 @@ header {
   grid-area: header;
   height: 40px;
   padding: 8px 32px;
-  background-color: var(--teal);
+  background-color: var(--aqua);
   align-self: stretch;
   align-items: flex-start;
 }
 nav {
   display: flex;
   grid-area: sidebar;
-  background-color: var(--teal);
+  background-color: var(--aqua);
   align-self: stretch;
 }
 
